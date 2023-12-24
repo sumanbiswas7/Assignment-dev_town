@@ -1,0 +1,23 @@
+* {
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+
+   color: var(--color-txt-pr);
+}
+
+:root {
+   --color-accent-pr: #9a9afd;
+   --color-accent-sd: #bbbbea;
+
+   --color-accent-light-pr: #b1b1de;
+   --color-accent-light-sd: #ece1ef;
+
+   --color-txt-pr: #1d1d1d;
+   --color-txt-light-pr: #fff;
+
+   /* Others */
+   --content-height: 90vh;
+   --navbar-height: 10vh;
+}
