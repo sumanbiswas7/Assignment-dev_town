@@ -10,7 +10,8 @@
       "react": "^18.2.0",
       "react-dom": "^18.2.0",
       "react-router-dom": "^6.21.1",
-      "@pineapple/utils": "*"
+      "@pineapple/utils": "*",
+      "@pineapple/types": "*"
    },
    "devDependencies": {
       "@rspack/cli": "0.4.0",

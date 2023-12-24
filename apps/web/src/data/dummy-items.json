@@ -1,0 +1,50 @@
+[
+   {
+      "title": "Pineapple A25",
+      "ram": "16GB",
+      "rom": "512GB",
+      "tags": ["A21 Ionic", "20MP", "65W"],
+      "price": "19,999",
+      "img": "https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/devtown-assignment/mobile-1.webp"
+   },
+   {
+      "title": "Pineapple XG2",
+      "ram": "8GB",
+      "rom": "128GB",
+      "tags": ["A19 Ionic", "25MP", "35W"],
+      "price": "17,999",
+      "img": "https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/devtown-assignment/mobile-2.webp"
+   },
+   {
+      "title": "Pineapple XG50",
+      "ram": "12GB",
+      "rom": "128GB",
+      "tags": ["A20 Ionic", "25MP", "44W"],
+      "price": "18,999",
+      "img": "https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/devtown-assignment/mobile-3.webp"
+   },
+   {
+      "title": "Pineapple M21",
+      "ram": "6GB",
+      "rom": "32GB",
+      "tags": ["A15 Ionic", "8MP", "18W"],
+      "price": "14,999",
+      "img": "https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/devtown-assignment/mobile-4.webp"
+   },
+   {
+      "title": "Pineapple M56",
+      "ram": "8GB",
+      "rom": "64GB",
+      "tags": ["A14 Ionic", "13MP", "22W"],
+      "price": "15,999",
+      "img": "https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/devtown-assignment/mobile-5.webp"
+   },
+   {
+      "title": "Pineapple A25R",
+      "ram": "6GB",
+      "rom": "128GB",
+      "tags": ["A21 Ionic", "13MP", "65W"],
+      "price": "16,999",
+      "img": "https://sumanbiswas-website.s3.ap-south-1.amazonaws.com/devtown-assignment/mobile-1.webp"
+   }
+]

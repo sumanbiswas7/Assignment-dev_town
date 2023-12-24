@@ -6,6 +6,7 @@ import blobUrl from "../assets/graphics/blob.svg";
 import mobUrl from "../assets/mobiles/mobile-1.webp";
 import { Button } from "../components/ui/button/button";
 import { Filter } from "../components/filter/filter";
+import { ItemsGrid } from "../components/layout/items-grid/items-grid";
 
 export default function HomePage() {
    return (
@@ -19,7 +20,7 @@ export default function HomePage() {
                   <p>Pineapple A25</p>
                   <h1>Discover Effortless Living!</h1>
                   <p>
-                     Experience Swift Simplicity Beyond iPhone 16 Pro MaxAll under 20k INR: Transform, Customize, and
+                     Experience Swift Simplicity Beyond iPhone 16 Pro Max All under 20k INR: Transform, Customize, and
                      Thrive Upgrade Your Lifestyle with our finest Enhanced Ecosystem
                   </p>
                   <Button variant="filled">Buy Now</Button>
@@ -34,6 +35,7 @@ export default function HomePage() {
          </div>
 
          <Filter />
+         <ItemsGrid />
       </main>
    );
 }
