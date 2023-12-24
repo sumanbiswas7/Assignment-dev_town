@@ -3,6 +3,6 @@ export interface Mobile {
    ram: string;
    rom: string;
    tags: string[];
-   price: string;
+   price: number;
    img: string;
 }

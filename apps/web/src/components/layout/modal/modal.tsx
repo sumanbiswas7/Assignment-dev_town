@@ -12,6 +12,53 @@ export function Modal({ onClose, open }: Props) {
 
    const inputRef = useRef<HTMLInputElement | null>(null);
 
+   function handleFilterByPrice(e: React.ChangeEvent<HTMLSelectElement>) {
+      const selected = e.target.value;
+
+      const filteredItems = DUMMY_ITEMS.filter((item) => {
+         if (item.price < parseInt(selected)) return true;
+         return false;
+      });
+
+      setQuery({ flag: true, data: filteredItems });
+      setModal(false);
+   }
+   function handleFilterByRam(e: React.ChangeEvent<HTMLSelectElement>) {
+      const selected = e.target.value;
+
+      const filteredItems = DUMMY_ITEMS.filter((item) => {
+         if (item.ram === selected) return true;
+         return false;
+      });
+
+      setQuery({ flag: true, data: filteredItems });
+      setModal(false);
+   }
+   function handleFilterByRom(e: React.ChangeEvent<HTMLSelectElement>) {
+      const selected = e.target.value;
+
+      const filteredItems = DUMMY_ITEMS.filter((item) => {
+         if (item.rom === selected) return true;
+         return false;
+      });
+
+      setQuery({ flag: true, data: filteredItems });
+      setModal(false);
+   }
+   function handleFilterByProcessor(e: React.ChangeEvent<HTMLSelectElement>) {
+      const selected = e.target.value;
+
+      const filteredItems = DUMMY_ITEMS.filter((item) => {
+         for (const tag of item.tags) {
+            if (tag.includes(selected)) return true;
+         }
+
+         return false;
+      });
+
+      setQuery({ flag: true, data: filteredItems });
+      setModal(false);
+   }
    function handleSearch(e: React.KeyboardEvent<HTMLInputElement>) {
       if (e.key !== "Enter") return;
       const slug = inputRef?.current?.value;
@@ -27,7 +74,6 @@ export function Modal({ onClose, open }: Props) {
       setQuery({ flag: true, data: filteredItems });
       setModal(false);
    }
-
    function clearSearch() {
       const curInp = inputRef.current;
       if (curInp) curInp.value = "";
@@ -35,6 +81,7 @@ export function Modal({ onClose, open }: Props) {
       setQuery({ flag: false, data: null });
       setModal(false);
    }
+
    return (
       <div className={classes.page} style={{ display: open ? undefined : "none" }}>
          <div className={classes.close_backdrop} onClick={onClose} />
@@ -51,19 +98,19 @@ export function Modal({ onClose, open }: Props) {
             <div className={classes.two_col}>
                <div>
                   <p>Filter By Price</p>
-                  <select>
-                     <option>Less than 15,000</option>
-                     <option>Less than 18,000</option>
-                     <option>Less than 20,000</option>
+                  <select onChange={handleFilterByPrice}>
+                     <option value={15000}>Less than 15,000</option>
+                     <option value={18000}>Less than 18,000</option>
+                     <option value={20000}>Less than 20,000</option>
                   </select>
                </div>
                <div>
                   <p>Filter By Ram</p>
-                  <select>
-                     <option>6GB</option>
-                     <option>8GB</option>
-                     <option>12GB</option>
-                     <option>16GB</option>
+                  <select onChange={handleFilterByRam}>
+                     <option value={"6GB"}>6GB</option>
+                     <option value={"8GB"}>8GB</option>
+                     <option value={"12GB"}>12GB</option>
+                     <option value={"16GB"}>16GB</option>
                   </select>
                </div>
             </div>
@@ -71,21 +118,21 @@ export function Modal({ onClose, open }: Props) {
             <div className={classes.two_col}>
                <div>
                   <p>Filter By Storage</p>
-                  <select>
-                     <option>32GB</option>
-                     <option>64GB</option>
-                     <option>128GB</option>
-                     <option>512GB</option>
+                  <select onChange={handleFilterByRom}>
+                     <option value={"32GB"}>32GB</option>
+                     <option value={"64GB"}>64GB</option>
+                     <option value={"128GB"}>128GB</option>
+                     <option value={"512GB"}>512GB</option>
                   </select>
                </div>
                <div>
                   <p>Filter Processor</p>
-                  <select>
-                     <option>A14 Ionic</option>
-                     <option>A15 Ionic</option>
-                     <option>A19 Ionic</option>
-                     <option>A20 Ionic</option>
-                     <option>A21 Ionic</option>
+                  <select onChange={handleFilterByProcessor}>
+                     <option value={"A14"}>A14 Ionic</option>
+                     <option value={"A15"}>A15 Ionic</option>
+                     <option value={"A19"}>A19 Ionic</option>
+                     <option value={"A20"}>A20 Ionic</option>
+                     <option value={"A21"}>A21 Ionic</option>
                   </select>
                </div>
             </div>
