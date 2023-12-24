@@ -1,0 +1,8 @@
+.filter_cont {
+   margin-block: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   padding-inline: 1rem;
+}

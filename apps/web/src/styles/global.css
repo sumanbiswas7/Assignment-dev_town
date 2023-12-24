@@ -8,6 +8,7 @@
 }
 
 :root {
+   /* Colors */
    --color-accent-pr: #9a9afd;
    --color-accent-sd: #bbbbea;
 
@@ -20,4 +21,25 @@
    /* Others */
    --content-height: 90vh;
    --navbar-height: 10vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: var(--color-accent-pr);
+   border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: var(--color-accent-light-pr);
 }

@@ -5,6 +5,7 @@ import classes from "./home.module.css";
 import blobUrl from "../assets/graphics/blob.svg";
 import mobUrl from "../assets/mobiles/mobile-1.webp";
 import { Button } from "../components/ui/button/button";
+import { Filter } from "../components/filter/filter";
 
 export default function HomePage() {
    return (
@@ -31,6 +32,8 @@ export default function HomePage() {
                </div>
             </div>
          </div>
+
+         <Filter />
       </main>
    );
 }
