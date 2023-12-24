@@ -7,8 +7,13 @@ import mobUrl from "../assets/mobiles/mobile-1.webp";
 import { Button } from "../components/ui/button/button";
 import { Filter } from "../components/filter/filter";
 import { ItemsGrid } from "../components/layout/items-grid/items-grid";
+import { Modal } from "../components/layout/modal/modal";
+import { useAtom } from "jotai";
+import { modalAtom } from "../atoms/search-atom";
 
 export default function HomePage() {
+   const [modal, setModal] = useAtom(modalAtom);
+
    return (
       <main>
          <NavBar />
@@ -34,8 +39,9 @@ export default function HomePage() {
             </div>
          </div>
 
-         <Filter />
+         <Filter onClick={() => setModal(true)} />
          <ItemsGrid />
+         <Modal open={modal} onClose={() => setModal(false)} />
       </main>
    );
 }

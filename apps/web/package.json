@@ -7,11 +7,12 @@
       "build": "NODE_ENV=production rspack build"
    },
    "dependencies": {
+      "@pineapple/types": "*",
+      "@pineapple/utils": "*",
+      "jotai": "^2.6.0",
       "react": "^18.2.0",
       "react-dom": "^18.2.0",
-      "react-router-dom": "^6.21.1",
-      "@pineapple/utils": "*",
-      "@pineapple/types": "*"
+      "react-router-dom": "^6.21.1"
    },
    "devDependencies": {
       "@rspack/cli": "0.4.0",
