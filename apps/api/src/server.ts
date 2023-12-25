@@ -13,11 +13,11 @@ app.use(cors());
 app.use("/auth", authRoutes);
 
 app.get("/", (req: Request, res: Response) => {
-  res.json({
-    working: true,
-    message: `Hello World`,
-    secret: `SECRET: ${process.env.SECRET} 🤫`,
-  });
+   res.json({
+      working: true,
+      message: `Hello World`,
+      secret: `SECRET: ${process.env.SECRET} 🤫`,
+   });
 });
 
 export const handler = serverless(app);
